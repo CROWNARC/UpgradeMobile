@@ -83,24 +83,24 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     <div className="space-y-6">
       {/* Action Buttons */}
       {(movieId || movie) && (
-        <div className="flex justify-end space-x-3">
+        <div className="flex justify-end space-x-2 md:space-x-3 flex-wrap gap-2">
           {movieId && (
             <button
               onClick={handleShare}
-              className="flex items-center space-x-2 bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 mb-2 shadow-lg"
+              className="flex items-center space-x-1 md:space-x-2 bg-blue-600 text-white px-3 md:px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 mb-2 shadow-lg text-sm md:text-base mobile-touch-target"
               title="Share this movie"
             >
-              <Share2 className="w-5 h-5" />
+              <Share2 className="w-4 h-4 md:w-5 md:h-5" />
               <span>Share</span>
             </button>
           )}
           {movie && (
             <button
               onClick={() => setShowReportModal(true)}
-              className="flex items-center space-x-2 bg-red-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 mb-2 shadow-lg"
+              className="flex items-center space-x-1 md:space-x-2 bg-red-600 text-white px-3 md:px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 mb-2 shadow-lg text-sm md:text-base mobile-touch-target"
               title="Report issue with this movie"
             >
-              <Flag className="w-5 h-5" />
+              <Flag className="w-4 h-4 md:w-5 md:h-5" />
               <span>Report</span>
             </button>
           )}
@@ -108,18 +108,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       )}
       {/* Copied Message */}
       {showCopied && (
-        <div className="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 bg-black/90 text-white px-6 py-3 rounded-xl shadow-lg flex items-center space-x-2 animate-fade-in">
-          <Check className="w-5 h-5 text-green-400" />
-          <span>Link of the page copied</span>
+        <div className="fixed top-20 md:top-24 left-1/2 transform -translate-x-1/2 z-50 bg-black/90 text-white px-4 md:px-6 py-2 md:py-3 rounded-xl shadow-lg flex items-center space-x-2 animate-fade-in">
+          <Check className="w-4 h-4 md:w-5 md:h-5 text-green-400" />
+          <span className="text-sm md:text-base">Link copied</span>
         </div>
       )}
       {/* Video Player */}
-      <div className="relative bg-black rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+      <div className="relative bg-black rounded-lg overflow-hidden mobile-video-player" style={{ aspectRatio: '16/9' }}>
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
             <div className="flex flex-col items-center space-y-4">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-              <p className="text-white">Loading video...</p>
+              <div className="animate-spin rounded-full h-8 w-8 md:h-12 md:w-12 border-b-2 border-blue-500"></div>
+              <p className="text-white text-sm md:text-base">Loading video...</p>
             </div>
           </div>
         )}
@@ -127,12 +127,12 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         {hasError && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900">
             <div className="text-center">
-              <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
-              <h3 className="text-white text-lg font-semibold mb-2">Playback Error</h3>
-              <p className="text-gray-400 mb-4">Unable to load this video source.</p>
+              <AlertCircle className="w-8 h-8 md:w-12 md:h-12 text-red-500 mx-auto mb-3 md:mb-4" />
+              <h3 className="text-white text-base md:text-lg font-semibold mb-2">Playback Error</h3>
+              <p className="text-gray-400 mb-3 md:mb-4 text-sm md:text-base">Unable to load this video source.</p>
               <button
                 onClick={() => handleSourceChange((selectedSource + 1) % watchSources.length)}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                className="px-3 md:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm md:text-base mobile-touch-target"
               >
                 Try Next Server
               </button>
@@ -154,17 +154,17 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
       {/* Server Selection */}
       {watchSources.length > 1 && (
-        <div className="bg-gray-800 rounded-lg p-4">
-          <h3 className="text-white font-semibold mb-3 flex items-center">
-            <Play className="w-5 h-5 mr-2" />
+        <div className="bg-gray-800 rounded-lg p-3 md:p-4">
+          <h3 className="text-white font-semibold mb-3 flex items-center text-sm md:text-base">
+            <Play className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Select Server
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mobile-server-grid">
             {watchSources.map((source, index) => (
               <button
                 key={index}
                 onClick={() => handleSourceChange(index)}
-                className={`p-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                className={`p-2 md:p-3 rounded-lg text-xs md:text-sm font-medium transition-colors duration-200 mobile-server-button mobile-touch-target ${
                   selectedSource === index
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
@@ -181,9 +181,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
       {/* Download Links */}
       {downloadSources.length > 0 && (
-        <div className="bg-gray-800 rounded-lg p-4">
-          <h3 className="text-white font-semibold mb-3 flex items-center">
-            <Download className="w-5 h-5 mr-2" />
+        <div className="bg-gray-800 rounded-lg p-3 md:p-4">
+          <h3 className="text-white font-semibold mb-3 flex items-center text-sm md:text-base">
+            <Download className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Download Options
           </h3>
           <div className="space-y-2">
@@ -193,18 +193,18 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200 group"
+                className="flex items-center justify-between p-2 md:p-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors duration-200 group mobile-touch-target"
               >
                 <div className="flex items-center">
-                  <Download className="w-4 h-4 text-green-400 mr-2" />
-                  <span className="text-white font-medium">{source.type}</span>
+                  <Download className="w-3 h-3 md:w-4 md:h-4 text-green-400 mr-2" />
+                  <span className="text-white font-medium text-sm md:text-base">{source.type}</span>
                   {source.quality && (
-                    <span className="ml-2 px-2 py-1 bg-blue-600 text-white text-xs rounded">
+                    <span className="ml-2 px-1.5 md:px-2 py-0.5 md:py-1 bg-blue-600 text-white text-xs rounded">
                       {source.quality}
                     </span>
                   )}
                 </div>
-                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                <ExternalLink className="w-3 h-3 md:w-4 md:h-4 text-gray-400 group-hover:text-white" />
               </a>
             ))}
           </div>

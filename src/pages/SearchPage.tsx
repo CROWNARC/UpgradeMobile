@@ -80,17 +80,17 @@ const SearchPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-black pt-16 mobile-search-page mobile-safe-top">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-6 flex items-center">
-            <SearchIcon className="w-8 h-8 mr-3" />
+        <div className="mb-6 md:mb-8 mobile-search-header">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6 flex items-center mobile-search-title">
+            <SearchIcon className="w-6 h-6 md:w-8 md:h-8 mr-2 md:mr-3" />
             Search Movies & TV Shows
           </h1>
           
           {/* Search Bar */}
-          <div className="mb-6">
+          <div className="mb-4 md:mb-6">
             <SearchBar 
               onSearch={handleSearch}
               showSuggestions={false}
@@ -98,16 +98,18 @@ const SearchPage: React.FC = () => {
           </div>
 
           {/* Filters */}
-          <FilterBar
-            filters={filters}
-            onFiltersChange={handleFiltersChange}
-            genres={uniqueGenres}
-            years={uniqueYears}
-          />
+          <div className="mobile-filter-bar">
+            <FilterBar
+              filters={filters}
+              onFiltersChange={handleFiltersChange}
+              genres={uniqueGenres}
+              years={uniqueYears}
+            />
+          </div>
 
           {/* Results Summary */}
-          <div className="flex items-center justify-between mb-6">
-            <div className="text-gray-300">
+          <div className="flex items-center justify-between mb-4 md:mb-6 px-0 md:px-0">
+            <div className="text-gray-300 text-sm md:text-base">
               {query ? (
                 <span>
                   Found <span className="text-white font-semibold">{results.length}</span> results for "{query}"
@@ -122,7 +124,7 @@ const SearchPage: React.FC = () => {
             {(query || filters.genre || filters.year || filters.rating || filters.contentType) && (
               <button
                 onClick={clearAllFilters}
-                className="text-blue-400 hover:text-blue-300 text-sm"
+                className="text-blue-400 hover:text-blue-300 text-xs md:text-sm mobile-touch-target"
               >
                 Clear all filters
               </button>
@@ -131,36 +133,36 @@ const SearchPage: React.FC = () => {
 
           {/* Results Grid */}
           {results.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4 mobile-results-grid tablet-search-results">
               {results.map((result) => (
                 <div
                   key={`${result.type}-${result.id}`}
                   onClick={() => handleResultClick(result)}
                   className="group cursor-pointer"
                 >
-                  <div className="relative overflow-hidden rounded-lg">
+                  <div className="relative overflow-hidden rounded-lg mobile-touch-target">
                     <img
                       src={result.poster}
                       alt={result.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
-                    <div className="absolute top-2 left-2 bg-black/70 rounded px-2 py-1">
+                    <div className="absolute top-1 md:top-2 left-1 md:left-2 bg-black/70 rounded px-1.5 md:px-2 py-0.5 md:py-1">
                       <div className="flex items-center gap-1 text-blue-400 text-xs">
                         {getTypeIcon(result.type)}
-                        <span>{getTypeLabel(result.type)}</span>
+                        <span className="hidden sm:inline">{getTypeLabel(result.type)}</span>
                       </div>
                     </div>
                     {result.isNew && (
-                      <div className="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
+                      <div className="absolute top-1 md:top-2 right-1 md:right-2 bg-red-600 text-white text-xs px-1.5 md:px-2 py-0.5 md:py-1 rounded">
                         NEW
                       </div>
                     )}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3">
-                      <h3 className="text-white font-medium text-sm truncate">{result.title}</h3>
-                      <div className="flex items-center gap-2 text-xs text-gray-300">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-2 md:p-3">
+                      <h3 className="text-white font-medium text-xs md:text-sm truncate">{result.title}</h3>
+                      <div className="flex items-center gap-1 md:gap-2 text-xs text-gray-300">
                         <span className="text-yellow-400">{result.rating}</span>
-                        {result.year && <span>• {result.year}</span>}
+                        {result.year && <span className="hidden sm:inline">• {result.year}</span>}
                       </div>
                     </div>
                   </div>
@@ -168,11 +170,11 @@ const SearchPage: React.FC = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <div className="text-gray-400 text-lg mb-4">
+            <div className="text-center py-8 md:py-12">
+              <div className="text-gray-400 text-base md:text-lg mb-4">
                 {query ? 'No results found' : 'Search for movies and TV shows'}
               </div>
-              <p className="text-gray-500">
+              <p className="text-gray-500 text-sm md:text-base">
                 Try adjusting your search terms or filters
               </p>
             </div>

@@ -21,9 +21,9 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, size = 'medium' }) => {
   }, [movie.id]);
 
   const sizeClasses = {
-    small: 'w-40 h-60',
-    medium: 'w-48 h-72',
-    large: 'w-56 h-84'
+    small: 'w-32 sm:w-40 h-48 sm:h-60',
+    medium: 'w-36 sm:w-48 h-54 sm:h-72',
+    large: 'w-44 sm:w-56 h-66 sm:h-84'
   };
 
   const handleCardClick = () => {
@@ -55,7 +55,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, size = 'medium' }) => {
       className="group relative cursor-pointer"
       onClick={handleCardClick}
     >
-      <div className={`${sizeClasses[size]} relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 group-hover:scale-105`}>
+      <div className={`${sizeClasses[size]} relative overflow-hidden rounded-lg bg-gray-800 transition-transform duration-300 group-hover:scale-105 mobile-movie-card-image`}>
         {/* Poster Image */}
         <img
           src={movie.poster}
@@ -65,11 +65,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, size = 'medium' }) => {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 mobile-movie-card-overlay" />
 
         {/* New Badge */}
         {movie.isNew && (
-          <div className="absolute top-2 left-2 px-2 py-1 bg-red-600 text-white text-xs font-bold rounded">
+          <div className="absolute top-1 md:top-2 left-1 md:left-2 px-1.5 md:px-2 py-0.5 md:py-1 bg-red-600 text-white text-xs font-bold rounded">
             NEW
           </div>
         )}
@@ -81,68 +81,69 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, size = 'medium' }) => {
               e.stopPropagation();
               window.location.href = `/watch/${movie.id}`;
             }}
-            className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200"
+            className="p-2 md:p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors duration-200 mobile-touch-target"
           >
-            <Play className="w-6 h-6 text-white fill-current" />
+            <Play className="w-4 h-4 md:w-6 md:h-6 text-white fill-current" />
           </button>
         </div>
 
         {/* Favorite, Share & Report Buttons */}
-        <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+        <div className="absolute top-1 md:top-2 right-1 md:right-2 flex flex-col gap-1 md:gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
           <button
             onClick={handleFavorite}
-            className={`p-2 rounded-full shadow-lg border border-white/10 ${favorite ? 'bg-pink-600 text-white' : 'bg-gray-900/80 text-white hover:bg-gray-700'}`}
+            className={`p-1.5 md:p-2 rounded-full shadow-lg border border-white/10 mobile-touch-target ${favorite ? 'bg-pink-600 text-white' : 'bg-gray-900/80 text-white hover:bg-gray-700'}`}
             title={favorite ? 'Remove from Favorites' : 'Add to Favorites'}
           >
-            <Heart className={`w-5 h-5 ${favorite ? 'fill-current' : ''}`} fill={favorite ? 'currentColor' : 'none'} />
+            <Heart className={`w-3 h-3 md:w-5 md:h-5 ${favorite ? 'fill-current' : ''}`} fill={favorite ? 'currentColor' : 'none'} />
           </button>
           <button
             onClick={handleShare}
-            className="p-2 rounded-full shadow-lg border border-white/10 bg-blue-600 text-white hover:bg-blue-700"
+            className="p-1.5 md:p-2 rounded-full shadow-lg border border-white/10 bg-blue-600 text-white hover:bg-blue-700 mobile-touch-target"
             title="Share"
           >
-            <Share2 className="w-5 h-5" />
+            <Share2 className="w-3 h-3 md:w-5 md:h-5" />
           </button>
           <button
             onClick={(e) => {
               e.stopPropagation();
               setShowReportModal(true);
             }}
-            className="p-2 rounded-full shadow-lg border border-white/10 bg-red-600 text-white hover:bg-red-700"
+            className="p-1.5 md:p-2 rounded-full shadow-lg border border-white/10 bg-red-600 text-white hover:bg-red-700 mobile-touch-target"
             title="Report Issue"
           >
-            <Flag className="w-5 h-5" />
+            <Flag className="w-3 h-3 md:w-5 md:h-5" />
           </button>
         </div>
 
         {/* Movie Info */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <h3 className="text-white font-semibold text-sm mb-2 line-clamp-2">
+        <div className="absolute bottom-0 left-0 right-0 p-2 md:p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 mobile-movie-card-overlay">
+          <h3 className="text-white font-semibold text-xs md:text-sm mb-1 md:mb-2 line-clamp-2 mobile-movie-card-title">
             {movie.title}
           </h3>
           
-          <div className="flex items-center justify-between text-xs text-gray-300">
+          <div className="flex items-center justify-between text-xs text-gray-300 mobile-movie-card-info">
             <div className="flex items-center space-x-1">
-              <Star className="w-3 h-3 text-yellow-400 fill-current" />
+              <Star className="w-2 h-2 md:w-3 md:h-3 text-yellow-400 fill-current" />
               <span>{movie.rating}</span>
             </div>
             {movie.watchSources && movie.watchSources.length > 0 && (
               <div className="flex items-center space-x-1">
-                <Clock className="w-3 h-3" />
-                <span>Available</span>
+                <Clock className="w-2 h-2 md:w-3 md:h-3" />
+                <span className="hidden sm:inline">Available</span>
+                <span className="sm:hidden">•</span>
               </div>
             )}
           </div>
           
-          <p className="text-gray-400 text-xs mt-1 line-clamp-1">
+          <p className="text-gray-400 text-xs mt-0.5 md:mt-1 line-clamp-1">
             {movie.genre}
           </p>
         </div>
         {/* Copied Message */}
         {showCopied && (
-          <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-50 bg-black/90 text-white px-4 py-2 rounded-xl shadow-lg flex items-center space-x-2 animate-fade-in">
-            <Check className="w-4 h-4 text-green-400" />
-            <span className="text-sm">Link of the page copied</span>
+          <div className="absolute top-8 md:top-10 left-1/2 transform -translate-x-1/2 z-50 bg-black/90 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-xl shadow-lg flex items-center space-x-2 animate-fade-in">
+            <Check className="w-3 h-3 md:w-4 md:h-4 text-green-400" />
+            <span className="text-xs md:text-sm">Link copied</span>
           </div>
         )}
       </div>

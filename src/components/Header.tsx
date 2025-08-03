@@ -27,40 +27,40 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-xl border-b border-white/10 mobile-header mobile-safe-top">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left: Menu Button */}
           <div className="flex items-center relative">
             <button
-              className="p-2 text-gray-200 hover:text-white transition-colors duration-200 rounded-full bg-black/50 backdrop-blur-md shadow-lg border border-white/10"
+              className="p-2 text-gray-200 hover:text-white transition-colors duration-200 rounded-full bg-black/50 backdrop-blur-md shadow-lg border border-white/10 mobile-touch-target"
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Open menu"
             >
-              <Menu className="w-7 h-7" />
+              <Menu className="w-6 h-6 md:w-7 md:h-7" />
             </button>
             {/* Dropdown Panel */}
             {menuOpen && (
-              <div className="absolute left-0 top-full mt-2 w-56 bg-black/70 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 py-3 z-50 animate-fade-in">
+              <div className="absolute left-0 top-full mt-2 w-56 md:w-56 bg-black/70 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 py-3 z-50 animate-fade-in mobile-menu-panel">
                 <button
                   onClick={() => reloadNavigate('/')}
-                  className={`flex items-center space-x-3 w-full px-5 py-3 text-lg font-semibold rounded-lg transition-colors duration-200 ${isActive('/') ? 'bg-blue-600 text-white' : 'text-gray-200 hover:bg-gray-800/80'}`}
+                  className={`flex items-center space-x-3 w-full px-5 py-3 text-base md:text-lg font-semibold rounded-lg transition-colors duration-200 mobile-menu-item mobile-touch-target ${isActive('/') ? 'bg-blue-600 text-white' : 'text-gray-200 hover:bg-gray-800/80'}`}
                 >
-                  <Home className="w-6 h-6" />
+                  <Home className="w-5 h-5 md:w-6 md:h-6" />
                   <span>Home</span>
                 </button>
                 <button
                   onClick={() => reloadNavigate('/search')}
-                  className={`flex items-center space-x-3 w-full px-5 py-3 text-lg font-semibold rounded-lg transition-colors duration-200 ${isActive('/search') ? 'bg-blue-600 text-white' : 'text-gray-200 hover:bg-gray-800/80'}`}
+                  className={`flex items-center space-x-3 w-full px-5 py-3 text-base md:text-lg font-semibold rounded-lg transition-colors duration-200 mobile-menu-item mobile-touch-target ${isActive('/search') ? 'bg-blue-600 text-white' : 'text-gray-200 hover:bg-gray-800/80'}`}
                 >
-                  <Film className="w-6 h-6" />
+                  <Film className="w-5 h-5 md:w-6 md:h-6" />
                   <span>Movies</span>
                 </button>
                 <button
                   onClick={() => reloadNavigate('/tvshows')}
-                  className={`flex items-center space-x-3 w-full px-5 py-3 text-lg font-semibold rounded-lg transition-colors duration-200 ${isActive('/tvshows') ? 'bg-blue-600 text-white' : 'text-gray-200 hover:bg-gray-800/80'}`}
+                  className={`flex items-center space-x-3 w-full px-5 py-3 text-base md:text-lg font-semibold rounded-lg transition-colors duration-200 mobile-menu-item mobile-touch-target ${isActive('/tvshows') ? 'bg-blue-600 text-white' : 'text-gray-200 hover:bg-gray-800/80'}`}
                 >
-                  <Monitor className="w-6 h-6" />
+                  <Monitor className="w-5 h-5 md:w-6 md:h-6" />
                   <span>TV Shows</span>
                 </button>
               </div>
@@ -71,8 +71,8 @@ const Header: React.FC = () => {
           <div className="flex-1" />
 
           {/* Right: SearchBar, Notification, Account */}
-          <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-md rounded-full px-4 py-1 shadow-lg relative">
-            <div className="w-48 md:w-64">
+          <div className="flex items-center space-x-2 md:space-x-3 bg-white/10 backdrop-blur-md rounded-full px-3 md:px-4 py-1 shadow-lg relative">
+            <div className="w-32 sm:w-48 md:w-64 mobile-search-container">
               <SearchBar 
                 placeholder="Search movies & TV shows..."
                 showSuggestions={true}
@@ -81,24 +81,24 @@ const Header: React.FC = () => {
             {/* Notification Bell */}
             <div className="relative">
               <button
-                className="p-2 text-gray-200 hover:text-white transition-colors duration-200 rounded-full relative"
+                className="p-2 text-gray-200 hover:text-white transition-colors duration-200 rounded-full relative mobile-touch-target"
                 onClick={() => setNotifOpen((v) => !v)}
                 aria-label="Notifications"
               >
-                <Bell className="w-5 h-5" />
+                <Bell className="w-4 h-4 md:w-5 md:h-5" />
                 {unreadCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full px-1.5 py-0.5 border-2 border-black animate-pulse">
+                  <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full px-1 md:px-1.5 py-0.5 border-2 border-black animate-pulse">
                     {unreadCount}
                   </span>
                 )}
               </button>
               {/* Notification Dropdown */}
               {notifOpen && (
-                <div className="absolute right-0 top-full mt-2 w-80 bg-black/80 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 py-3 z-50 animate-fade-in">
+                <div className="absolute right-0 top-full mt-2 w-80 md:w-80 bg-black/80 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 py-3 z-50 animate-fade-in mobile-notification-panel">
                   <div className="flex items-center justify-between px-4 pb-2">
-                    <span className="text-white font-semibold text-lg">Notifications</span>
+                    <span className="text-white font-semibold text-base md:text-lg">Notifications</span>
                     <button
-                      className="text-blue-400 hover:underline text-sm"
+                      className="text-blue-400 hover:underline text-xs md:text-sm mobile-touch-target"
                       onClick={markAllRead}
                     >
                       Mark all read
@@ -106,14 +106,14 @@ const Header: React.FC = () => {
                   </div>
                   <div className="divide-y divide-gray-700 max-h-64 overflow-y-auto">
                     {notifications.length === 0 ? (
-                      <div className="text-gray-400 px-4 py-6 text-center">No notifications</div>
+                      <div className="text-gray-400 px-4 py-6 text-center text-sm">No notifications</div>
                     ) : notifications.map(n => (
                       <div key={n.id} className={`flex items-center px-4 py-3 gap-3 ${n.read ? 'opacity-60' : ''}`}>
-                        <CheckCircle className={`w-5 h-5 ${n.read ? 'text-green-400' : 'text-blue-400'}`} />
-                        <span className="text-white flex-1">{n.message}</span>
+                        <CheckCircle className={`w-4 h-4 md:w-5 md:h-5 ${n.read ? 'text-green-400' : 'text-blue-400'}`} />
+                        <span className="text-white flex-1 text-sm md:text-base">{n.message}</span>
                         {!n.read && (
                           <button
-                            className="text-xs text-blue-400 hover:underline"
+                            className="text-xs text-blue-400 hover:underline mobile-touch-target"
                             onClick={() => setNotifications(notifications.map(x => x.id === n.id ? { ...x, read: true } : x))}
                           >
                             Mark read
@@ -127,9 +127,9 @@ const Header: React.FC = () => {
             </div>
             <button 
               onClick={() => window.location.href = '/profile'}
-              className="p-2 text-gray-200 hover:text-white transition-colors duration-200 rounded-full"
+              className="p-2 text-gray-200 hover:text-white transition-colors duration-200 rounded-full mobile-touch-target"
             >
-              <User className="w-5 h-5" />
+              <User className="w-4 h-4 md:w-5 md:h-5" />
             </button>
           </div>
         </div>

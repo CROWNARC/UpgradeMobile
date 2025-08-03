@@ -23,13 +23,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg p-4 mb-6">
+    <div className="bg-gray-800 rounded-lg p-3 md:p-4 mb-4 md:mb-6">
       <div className="flex items-center mb-4">
-        <Filter className="w-5 h-5 text-white mr-2" />
-        <h3 className="text-white font-semibold">Filters</h3>
+        <Filter className="w-4 h-4 md:w-5 md:h-5 text-white mr-2" />
+        <h3 className="text-white font-semibold text-sm md:text-base">Filters</h3>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-4 mobile-filter-grid tablet-filter-grid">
         {/* Content Type Filter */}
         <div>
           <label className="block text-gray-300 text-sm font-medium mb-2">
@@ -38,7 +38,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <select
             value={filters.contentType || 'all'}
             onChange={(e) => handleFilterChange('contentType', e.target.value)}
-            className="w-full p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 md:p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base mobile-filter-select mobile-touch-target"
           >
             <option value="all">All Content</option>
             <option value="movie">Movies Only</option>
@@ -54,7 +54,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <select
             value={filters.genre || 'all'}
             onChange={(e) => handleFilterChange('genre', e.target.value)}
-            className="w-full p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 md:p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base mobile-filter-select mobile-touch-target"
           >
             <option value="all">All Genres</option>
             {genres.map(genre => (
@@ -71,7 +71,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <select
             value={filters.year || 'all'}
             onChange={(e) => handleFilterChange('year', e.target.value)}
-            className="w-full p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 md:p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base mobile-filter-select mobile-touch-target"
           >
             <option value="all">All Years</option>
             {years.map(year => (
@@ -88,7 +88,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <select
             value={filters.rating || 'all'}
             onChange={(e) => handleFilterChange('rating', e.target.value)}
-            className="w-full p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 md:p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base mobile-filter-select mobile-touch-target"
           >
             <option value="all">Any Rating</option>
             <option value="9.0">9.0+ Excellent</option>
@@ -106,7 +106,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           <select
             value={filters.sortBy || 'title'}
             onChange={(e) => handleFilterChange('sortBy', e.target.value as any)}
-            className="w-full p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 md:p-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm md:text-base mobile-filter-select mobile-touch-target"
           >
             <option value="title">Title A-Z</option>
             <option value="year">Year (Newest)</option>

@@ -1,0 +1,718 @@
+/* Mobile-specific styles for ProjectZ */
+/* This file contains mobile-optimized styles that work alongside the main styles */
+
+/* Mobile-first approach with responsive breakpoints */
+@media (max-width: 768px) {
+  /* Global mobile adjustments */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Header mobile styles */
+  .mobile-header {
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(20px);
+  }
+
+  .mobile-header .max-w-7xl {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .mobile-header .flex {
+    gap: 0.75rem;
+  }
+
+  /* Mobile menu improvements */
+  .mobile-menu-panel {
+    width: 280px;
+    max-width: 90vw;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-menu-item {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    margin: 0.25rem;
+  }
+
+  /* Search bar mobile optimization */
+  .mobile-search-container {
+    width: 200px;
+    max-width: 100%;
+  }
+
+  .mobile-search-input {
+    padding: 0.5rem 0.75rem;
+    padding-left: 2.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+  }
+
+  /* Notification panel mobile */
+  .mobile-notification-panel {
+    width: 320px;
+    max-width: 95vw;
+    right: 0;
+    top: 100%;
+    margin-top: 0.5rem;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  /* Spotlight carousel mobile */
+  .mobile-spotlight {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .mobile-spotlight-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .mobile-spotlight-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-spotlight-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-spotlight-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .mobile-spotlight-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .mobile-spotlight-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  /* Navigation arrows mobile */
+  .mobile-nav-arrow {
+    padding: 0.75rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-nav-arrow.left {
+    left: 1rem;
+  }
+
+  .mobile-nav-arrow.right {
+    right: 1rem;
+  }
+
+  /* Movie sections mobile */
+  .mobile-movie-section {
+    padding: 1.5rem 0;
+  }
+
+  .mobile-movie-section-header {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-movie-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .mobile-movie-scroll {
+    padding: 0 1rem;
+    gap: 0.75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-movie-card {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 140px;
+  }
+
+  .mobile-movie-card-image {
+    height: 200px;
+    border-radius: 0.75rem;
+  }
+
+  .mobile-movie-card-overlay {
+    padding: 0.75rem;
+  }
+
+  .mobile-movie-card-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-movie-card-info {
+    font-size: 0.625rem;
+    gap: 0.5rem;
+  }
+
+  /* Movie detail page mobile */
+  .mobile-movie-detail-hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .mobile-movie-detail-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .mobile-movie-detail-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-movie-detail-info {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-movie-detail-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .mobile-movie-detail-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .mobile-movie-detail-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  /* Watch page mobile */
+  .mobile-watch-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-watch-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .mobile-watch-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .mobile-watch-controls {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .mobile-watch-control-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Video player mobile */
+  .mobile-video-container {
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .mobile-video-player {
+    aspect-ratio: 16/9;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  /* Server selection mobile */
+  .mobile-server-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .mobile-server-button {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 0.5rem;
+  }
+
+  /* Search page mobile */
+  .mobile-search-page {
+    padding-top: 4rem;
+  }
+
+  .mobile-search-header {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-search-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-filter-bar {
+    background: rgba(31, 41, 55, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-filter-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mobile-filter-select {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    background: rgba(55, 65, 81, 0.8);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+  }
+
+  .mobile-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* TV Shows page mobile */
+  .mobile-tvshows-hero {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .mobile-tvshows-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .mobile-tvshow-card {
+    width: 100%;
+  }
+
+  /* TV Show detail mobile */
+  .mobile-tvshow-detail-hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .mobile-tvshow-seasons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-season-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .mobile-episodes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mobile-episode-card {
+    display: flex;
+    gap: 1rem;
+    background: rgba(17, 24, 39, 0.8);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid rgba(75, 85, 99, 0.3);
+  }
+
+  .mobile-episode-thumbnail {
+    width: 120px;
+    height: 80px;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .mobile-episode-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .mobile-episode-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .mobile-episode-number {
+    font-size: 0.75rem;
+    color: rgba(156, 163, 175, 1);
+  }
+
+  /* Profile page mobile */
+  .mobile-profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .mobile-profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mobile-profile-stats {
+    display: none; /* Hide on mobile, show in overview tab */
+  }
+
+  .mobile-profile-tabs {
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .mobile-profile-tab {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+  }
+
+  .mobile-profile-content {
+    padding: 1rem;
+  }
+
+  .mobile-favorites-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Footer mobile */
+  .mobile-footer {
+    padding: 2rem 1rem;
+  }
+
+  .mobile-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .mobile-footer-brand {
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-footer-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .mobile-footer-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-footer-links {
+    gap: 0.75rem;
+  }
+
+  .mobile-footer-social {
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Utility classes for mobile */
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-visible {
+    display: block !important;
+  }
+
+  .mobile-flex {
+    display: flex !important;
+  }
+
+  .mobile-grid {
+    display: grid !important;
+  }
+
+  /* Touch-friendly interactions */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improved scrolling */
+  .mobile-scroll-smooth {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Safe area adjustments for notched devices */
+  .mobile-safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .mobile-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Loading states mobile */
+  .mobile-loading {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .mobile-loading-spinner {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto 1rem;
+  }
+
+  /* Error states mobile */
+  .mobile-error {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 0.75rem;
+    margin: 1rem;
+  }
+
+  /* Modal mobile adjustments */
+  .mobile-modal {
+    margin: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 1rem;
+  }
+
+  .mobile-modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+  }
+
+  .mobile-modal-content {
+    padding: 1rem;
+  }
+
+  .mobile-modal-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(75, 85, 99, 0.3);
+  }
+
+  /* Form elements mobile */
+  .mobile-form-group {
+    margin-bottom: 1rem;
+  }
+
+  .mobile-form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-form-input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    color: white;
+  }
+
+  .mobile-form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    color: white;
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .mobile-form-button {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Tablet adjustments (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tablet-tvshow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tablet-search-results {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tablet-episodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tablet-filter-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .small-mobile-spotlight-title {
+    font-size: 1.75rem;
+  }
+
+  .small-mobile-movie-card {
+    width: 120px;
+  }
+
+  .small-mobile-movie-card-image {
+    height: 180px;
+  }
+
+  .small-mobile-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .small-mobile-server-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .small-mobile-episode-card {
+    flex-direction: column;
+  }
+
+  .small-mobile-episode-thumbnail {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+/* Landscape mobile adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .landscape-mobile-spotlight {
+    height: 90vh;
+  }
+
+  .landscape-mobile-hero {
+    height: 80vh;
+  }
+
+  .landscape-mobile-video {
+    height: 70vh;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .mobile-movie-card-image,
+  .mobile-episode-thumbnail,
+  .mobile-profile-avatar {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark mode adjustments for mobile */
+@media (prefers-color-scheme: dark) {
+  .mobile-form-input,
+  .mobile-form-textarea {
+    background: rgba(17, 24, 39, 0.9);
+    border-color: rgba(55, 65, 81, 0.8);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .mobile-movie-card,
+  .mobile-spotlight-button,
+  .mobile-nav-arrow {
+    transition: none;
+  }
+
+  .mobile-loading-spinner {
+    animation: none;
+  }
+}
+
+/* Print styles for mobile */
+@media print {
+  .mobile-header,
+  .mobile-footer,
+  .mobile-nav-arrow,
+  .mobile-watch-controls {
+    display: none !important;
+  }
+
+  .mobile-movie-detail-content,
+  .mobile-profile-content {
+    color: black !important;
+    background: white !important;
+  }
+}

@@ -152,7 +152,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     <div ref={searchRef} className="relative w-full max-w-md">
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Search className="absolute left-2 md:left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 md:w-5 md:h-5" />
           <input
             type="text"
             value={query}
@@ -160,15 +160,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
             onKeyDown={handleKeyDown}
             onFocus={() => query.trim() && setShowSuggestionsList(true)}
             placeholder={placeholder}
-            className="w-full pl-10 pr-10 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-8 md:pl-10 pr-8 md:pr-10 py-1.5 md:py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm md:text-base mobile-search-input"
           />
           {query && (
             <button
               type="button"
               onClick={clearSearch}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+              className="absolute right-2 md:right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white mobile-touch-target"
             >
-              <X className="w-4 h-4" />
+              <X className="w-3 h-3 md:w-4 md:h-4" />
             </button>
           )}
         </div>
@@ -176,9 +176,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
       {/* Suggestions Dropdown */}
       {showSuggestionsList && (suggestions.length > 0 || isSearching) && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-lg z-50 max-h-80 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-gray-800 border border-gray-600 rounded-lg shadow-lg z-50 max-h-64 md:max-h-80 overflow-y-auto">
           {isSearching ? (
-            <div className="p-4 text-center text-gray-400">
+            <div className="p-3 md:p-4 text-center text-gray-400 text-sm">
               Searching...
             </div>
           ) : (
@@ -186,7 +186,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
               <div
                 key={`${item.type}-${item.id}`}
                 onClick={() => handleSuggestionClick(item)}
-                className={`flex items-center p-3 cursor-pointer transition-colors duration-200 ${
+                className={`flex items-center p-2 md:p-3 cursor-pointer transition-colors duration-200 mobile-touch-target ${
                   index === selectedIndex 
                     ? 'bg-blue-600' 
                     : 'hover:bg-gray-700'
@@ -195,7 +195,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
                 <img
                   src={item.poster}
                   alt={item.title}
-                  className="w-12 h-16 object-cover rounded mr-3"
+                  className="w-10 h-14 md:w-12 md:h-16 object-cover rounded mr-2 md:mr-3"
                   loading="lazy"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
@@ -204,16 +204,16 @@ const SearchBar: React.FC<SearchBarProps> = ({
                 />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <h4 className="text-white font-medium truncate">{item.title}</h4>
-                    <div className="flex items-center gap-1 text-blue-400">
+                    <h4 className="text-white font-medium truncate text-sm md:text-base">{item.title}</h4>
+                    <div className="flex items-center gap-1 text-blue-400 flex-shrink-0">
                       {getTypeIcon(item.type)}
-                      <span className="text-xs">{getTypeLabel(item.type)}</span>
+                      <span className="text-xs hidden sm:inline">{getTypeLabel(item.type)}</span>
                     </div>
                   </div>
-                  <p className="text-gray-400 text-sm truncate">{item.genre}</p>
-                  <div className="flex items-center gap-2 text-sm">
+                  <p className="text-gray-400 text-xs md:text-sm truncate">{item.genre}</p>
+                  <div className="flex items-center gap-2 text-xs md:text-sm">
                     <span className="text-yellow-400">{item.rating}</span>
-                    {item.year && <span className="text-gray-500">• {item.year}</span>}
+                    {item.year && <span className="text-gray-500 hidden sm:inline">• {item.year}</span>}
                     {item.isNew && <span className="text-red-400 text-xs font-medium">NEW</span>}
                   </div>
                 </div>

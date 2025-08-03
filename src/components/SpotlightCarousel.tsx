@@ -51,7 +51,7 @@ const SpotlightCarousel: React.FC<SpotlightCarouselProps> = ({ movies }) => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden mobile-spotlight">
       {/* Background Images */}
       {movies.map((movie, index) => (
         <div
@@ -72,7 +72,7 @@ const SpotlightCarousel: React.FC<SpotlightCarouselProps> = ({ movies }) => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mobile-spotlight-content">
           <div className="max-w-2xl">
             {/* Logo instead of title */}
             <div className="mb-6">
@@ -80,16 +80,16 @@ const SpotlightCarousel: React.FC<SpotlightCarouselProps> = ({ movies }) => {
                 <img 
                   src="https://i.postimg.cc/Vs2Gm50M/doraemon-logo.webp"
                   alt="Doraemon"
-                  className="w-80 h-20 object-contain"
+                  className="w-60 md:w-80 h-16 md:h-20 object-contain"
                 />
               ) : currentMovie.title.toLowerCase().includes('shin-chan') || currentMovie.title.toLowerCase().includes('shinchan') ? (
                 <img 
                   src="https://i.postimg.cc/MGs54G8n/shinchan-logo.webp"
                   alt="Shin-chan"
-                  className="w-64 h-20 object-contain"
+                  className="w-48 md:w-64 h-16 md:h-20 object-contain"
                 />
               ) : (
-                <h1 className="text-5xl md:text-7xl font-bold text-green-400 mb-4 leading-tight drop-shadow-2xl">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-green-400 mb-4 leading-tight drop-shadow-2xl mobile-spotlight-title">
                   {currentMovie.title}
                 </h1>
               )}
@@ -100,7 +100,7 @@ const SpotlightCarousel: React.FC<SpotlightCarouselProps> = ({ movies }) => {
               {currentMovie.genre.split(', ').map((genre, index) => (
                 <span 
                   key={index}
-                  className="px-3 py-1 bg-gray-800/80 text-white text-sm rounded-full border border-gray-600"
+                  className="px-2 md:px-3 py-1 bg-gray-800/80 text-white text-xs md:text-sm rounded-full border border-gray-600"
                 >
                   {genre}
                 </span>
@@ -108,36 +108,36 @@ const SpotlightCarousel: React.FC<SpotlightCarouselProps> = ({ movies }) => {
             </div>
 
             {/* Movie Details */}
-            <div className="flex items-center space-x-4 mb-6 text-white">
-              <span className="text-lg">Movie</span>
+            <div className="flex items-center space-x-2 md:space-x-4 mb-6 text-white mobile-spotlight-info">
+              <span className="text-sm md:text-lg">Movie</span>
               <span className="text-gray-400">•</span>
-              <span className="text-lg">2023</span>
+              <span className="text-sm md:text-lg">2023</span>
               <span className="text-gray-400">•</span>
               <div className="flex items-center space-x-1">
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                <span className="text-lg font-medium">{currentMovie.rating}</span>
+                <Star className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current" />
+                <span className="text-sm md:text-lg font-medium">{currentMovie.rating}</span>
               </div>
             </div>
 
             {/* Synopsis */}
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed max-w-xl">
+            <p className="text-gray-300 text-sm md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mobile-spotlight-description">
               {currentMovie.description || "A captivating story that will take you on an unforgettable journey through imagination and adventure."}
             </p>
 
             {/* Action Buttons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3 md:space-x-4 mobile-spotlight-buttons">
               <button 
                 onClick={handlePlayClick}
-                className="flex items-center space-x-3 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg"
+                className="flex items-center space-x-2 md:space-x-3 bg-blue-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg mobile-spotlight-button"
               >
-                <Play className="w-5 h-5 fill-current" />
+                <Play className="w-4 h-4 md:w-5 md:h-5 fill-current" />
                 <span>Watch Now</span>
               </button>
               <button 
                 onClick={handleMoreInfoClick}
-                className="flex items-center space-x-3 bg-gray-700/80 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-200"
+                className="flex items-center space-x-2 md:space-x-3 bg-gray-700/80 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-gray-700 transition-colors duration-200 mobile-spotlight-button"
               >
-                <Info className="w-5 h-5" />
+                <Info className="w-4 h-4 md:w-5 md:h-5" />
                 <span>More Info</span>
               </button>
             </div>
@@ -147,25 +147,25 @@ const SpotlightCarousel: React.FC<SpotlightCarouselProps> = ({ movies }) => {
         {/* Navigation Arrows */}
         <button
           onClick={goToPrevious}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full bg-black/50 text-white hover:bg-black/70 shadow-lg transition-colors duration-200"
+          className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 p-3 md:p-4 rounded-full bg-black/50 text-white hover:bg-black/70 shadow-lg transition-colors duration-200 mobile-nav-arrow left mobile-touch-target"
         >
-          <ChevronLeft className="w-7 h-7" />
+          <ChevronLeft className="w-5 h-5 md:w-7 md:h-7" />
         </button>
         <button
           onClick={goToNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-4 rounded-full bg-black/50 text-white hover:bg-black/70 shadow-lg transition-colors duration-200"
+          className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 p-3 md:p-4 rounded-full bg-black/50 text-white hover:bg-black/70 shadow-lg transition-colors duration-200 mobile-nav-arrow right mobile-touch-target"
         >
-          <ChevronRight className="w-7 h-7" />
+          <ChevronRight className="w-5 h-5 md:w-7 md:h-7" />
         </button>
       </div>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3">
         {movies.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-200 mobile-touch-target ${
               index === currentIndex
                 ? 'bg-blue-500 scale-125 shadow-lg'
                 : 'bg-gray-500 hover:bg-gray-400'
