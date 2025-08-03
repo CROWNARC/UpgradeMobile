@@ -1,0 +1,1011 @@
+import { Show, MoviesData } from '../types';
+
+export const showsData: Show[] = [
+  {
+    id: "doraemon",
+    title: "Doraemon",
+    poster: "https://p325k7wa.twic.pics/high/doraemon/doraemon-story-of-seasons-2/00-page-setup/DSOS2_Header-Mobile.jpg?twic=v1/resize=760/step=10/quality=80",
+    moviesCount: "41 Movies Available"
+  },
+  {
+    id: "shinchan",
+    title: "Shinchan",
+    poster: "https://stat.ameba.jp/user_images/20200519/04/smayuzu/44/ee/j/o1080060914760914465.jpg?caw=800",
+    moviesCount: "32 Movies Available"
+  },
+  {
+    id: "pokemon",
+    title: "Pokemon",
+    poster: "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABRi5AJkZ8Qy7tKM86nq8rX78sLZwi3E4iYH4vxYIr1wfwpyTfzMpOZFqk81pVJaQGGHk7SV74BxSd67eshn_gXLj9LpOiE-e3Dlo.jpg?r=a5e",
+    moviesCount: "0 Movies Available"
+  }
+];
+
+export const moviesData: MoviesData = {
+  doraemon: [
+    {
+      id: "11",
+      title: "Doraemon: Treasure Island",
+      poster: "https://play-lh.googleusercontent.com/oESQPuIZhSWalyldjyVuGSTuEaWscToJsOuf4FEv_DeYM5bTzYHK1B726gJw33DSsX4rYbDQicScztASnZUh",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.7/10",
+      watchSources: [
+        { type: "dailymotion", id: "x91ccw4" },
+        { type: "youtube", id: "dQw4w9WgXcQ" },
+        { type: "watch2", url: "https://wishonly.site/e/i1nfw568cima" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#8ibzf&dl=1" }
+      ],
+      isNew: true
+    },
+    {
+      id: "12",
+      title: "Doraemon: Nobita's Chronicle of the Moon Exploration",
+     poster: "https://m.media-amazon.com/images/M/MV5BZGE4NGIzMmQtOTcwZi00Mjk4LWFhM2ItMDE0NWU4ZDU3ZjVkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+     spotlightImage: "https://image.tmdb.org/t/p/original/9AmRLvf2xpVQ5vf2zouIwcGMz6n.jpg",
+      genre: "Sci-Fi, Adventure, Family",
+      rating: "8.2/10",
+      year: "2019",
+      duration: "111 min",
+      director: "Jeong-beom Lee",
+      description: "Nobita discovers a mysterious sphere that leads to an adventure on the moon, where he encounters a civilization of rabbit-like creatures.",
+      watchSources: [
+        { type: "dailymotion", id: "x9l0qlm" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#8ibzf&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#8ibzf&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "13",
+      title: "Doraemon: Nobita and the Castle of the Undersea Devil",
+      poster: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2667-wxEYyB5xU36z.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "7.7/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9lfwfq" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#a1qni&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#a1qni&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "14",
+      title: "Doraemon: Nobita and the Island of Miracles ~Animal Adventure",
+      poster: "https://m.media-amazon.com/images/M/MV5BM2VkOTJlMmYtMDdiNC00YWI2LTkwY2QtMzAzZjAwZjA5OWI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.0/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9koyam" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#e6nd1&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#e6nd1&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "15",
+      title: "Doraemon: Nobita's Great Adventure in the Antarctic",
+      poster: "https://m.media-amazon.com/images/M/MV5BNDdmZTcwNDYtYTdkMS00MWNlLThkOTgtODU3NDQ2ZjZiZDJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      spotlightImage: "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABU-3Xs5FQG0yM0wuOjzAyRjiD1rI-PEYgFk3-8SvJQWCqzdUOSPaOK3mrrCZkNVsY4HVQUDYY2jQxXO1UPYvboxSG7tt2B-X1xsi.jpg?r=307",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.3/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9lj25c" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#xb8dt&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#xb8dt&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "16",
+      title: "Doraemon: Nobita's Sky Utopia",
+      poster: "https://m.media-amazon.com/images/M/MV5BNGU1ZGNkYzgtZTJhOC00ZjkyLTgzMWEtOTNiODMzODA3OTIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      spotlightImage: "https://userstyles.org/style_screenshots/265606_after.jpeg?r=1751356808",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.5/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9jctji" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#zolu1&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#zolu1&dl=1" }
+      ],
+      isNew: true
+    },
+    {
+      id: "17",
+      title: "Doraemon: Nobita's Parallel Visit to the West",
+      poster: "https://m.media-amazon.com/images/M/MV5BMzVlMDBiNjItMzhhOC00MjI2LTk0NDUtYzc1MWQ4MjIwN2ViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.0/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9kzo14" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#fuvre&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#fuvre&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "18",
+      title: "Doraemon: Nobita and the Tin Labyrinth",
+      poster: "https://m.media-amazon.com/images/M/MV5BZDFjMTYwM2YtZTJjZS00YTdlLWJmZWMtYmNmZGE4MGExNmM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.8/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9js9i2" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#9hptr&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#9hptr&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "19",
+      title: "Doraemon the Movie: Nobita's Spaceblazer",
+      poster: "https://m.media-amazon.com/images/M/MV5BNmRjMzdjYjYtNmFiYy00OTMwLTg2NDctNjUyYWY0N2ZjNzEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "dailymotion", id: "x94wgzy" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#wlzv9&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#wlzv9&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "110",
+      title: "Doraemon: Movie Nobita's Diary of the Creation of the World",
+      poster: "https://m.media-amazon.com/images/M/MV5BMjRlYTE0Y2EtMjdmZi00OTIzLTk3NGItMjE2OGNkMDQ3NWE4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.1/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9j9li0" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#wlz5w&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#wlz5w&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "111",
+      title: "Doraemon: Nobita's Dinosaur",
+      poster: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx3727-idWMbFqsVI8X.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.6/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9co758" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#tgmcx&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#tgmcx&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "112",
+      title: "Doraemon: Nobita and the Steel Troops",
+      poster: "https://image.tmdb.org/t/p/original/iiw3GDg0FML220O6U8MZKwn70zN.jpg",
+      spotlightImage: "https://wallpapercave.com/wp/wp10108151.png",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "9.2/10",
+      watchSources: [
+        { type: "v2", url: "https://megaplay.buzz/stream/s-2/72788/sub" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#cs3j9&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#cs3j9&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "113",
+      title: "Doraemon: Nobita's Galaxy Train",
+      poster: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2675-Jth4VYAgu6lM.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.4/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#gt5sa&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#gt5sa&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "114",
+      title: "Doraemon: Nobita's Great Adventure in the South Sea",
+      poster: "https://m.media-amazon.com/images/M/MV5BYjU3NTkwYmQtY2VjOC00YTBhLTlhYzEtMzQ5NmZjYWIxZTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.2/10",
+      watchSources: [
+        { type: "watch2", url: "https://gradehgplus.com/e/xkwfmlh4pe7p" },
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#y3cwt&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#y3cwt&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "115",
+      title: "Doraemon: Nobita's Little Space War",
+      poster: "https://archive.org/download/dtm-nlsw_202211/DTM%20-%20NLSW.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#bxip1&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#bxip1&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "116",
+      title: "Doraemon: Nobita and the Birth of Japan",
+      poster: "https://m.media-amazon.com/images/M/MV5BOGM2Y2VkY2YtZDdjOS00ZmI2LWFkZGQtN2YxMTFjOTJiYzg1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.7/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#wlzrj&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#wlzrj&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "117",
+      title: "Doraemon: Nobita and the Three Magical Swordsmen",
+      poster: "https://m.media-amazon.com/images/M/MV5BYTk4NDRlZDMtYjQ0Ny00NjEzLTgzN2QtZjMzYWJiZDlmNzIxXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "7.9/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#6ersu&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#6ersu&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "118",
+      title: "Doraemon: Nobita and the Space Heroes",
+      poster: "https://m.media-amazon.com/images/M/MV5BODZhOTg4YzEtYTYxNi00ZTA3LWFiZWUtN2I0ZDE0MDBlNDUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#wlz5z&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#wlz5z&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "119",
+      title: "Doraemon: Ichi Mera Dost",
+      poster: "https://m.media-amazon.com/images/M/MV5BMTkzNWNkNDktYzRkMi00NTQwLWE1NjUtNTA3Njg2NDkxMTA0XkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Family, Comedy",
+      rating: "7.7/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#nr69f&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#nr69f&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "120",
+      title: "Doraemon: Hara Hara Planet",
+      poster: "https://m.media-amazon.com/images/M/MV5BNjA1MGY4ZWMtNDVmNS00OTczLTk0MGYtODU4M2E3MDg3NjllXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#9hput&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#9hput&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "121",
+      title: "Doraemon: Dinosaur Yodhha",
+      poster: "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F4AMuQBdwHAGYDRgU8Ao3x4mR7cu.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "7.9/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#nr6zg&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#nr6zg&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "122",
+      title: "Doraemon: Nobita in Gol Gol Golmaal",
+      poster: "https://m.media-amazon.com/images/M/MV5BZDE5YjA1MzktYTIwOS00MmUxLWI2ZmUtYzdlNzZhY2I1NmY0XkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Comedy, Family",
+      rating: "7.7/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#8ibjg&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#8ibjg&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "123",
+      title: "Doraemon: Nobita and the Birdopia Sultan",
+      poster: "https://m.media-amazon.com/images/M/MV5BMmZhYmE0NWQtNWUyNy00MzA3LWI4MzEtZGYxNTY5N2Q1MDgzXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#xb81x&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#xb81x&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "124",
+      title: "Doraemon: Nobita and the Robot Kingdom",
+      poster: "https://m.media-amazon.com/images/M/MV5BNjYxOWQ2ZjQtYWI3MC00OGVjLWFkMDgtZDJmNTkyOGExM2UzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "7.9/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#y3c1e&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#y3c1e&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "125",
+      title: "Doraemon: Nobita Universe Yatra",
+      poster: "https://image.tmdb.org/t/p/original/vi5ZTZv3uTY3PahI6sVP70v6AXj.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#6erpt&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#6erpt&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "126",
+      title: "Doraemon: Nobita and the Animal Planet",
+      poster: "https://a.ltrbxd.com/resized/film-poster/1/2/0/2/0/3/120203-doraemon-nobita-and-the-animal-planet-0-230-0-345-crop.jpg?v=909a4cc6e4",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "8.1/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#9hses&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#9hses&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "127",
+      title: "Doraemon: Nobita's Great Battle of the Mermaid Kings",
+      poster: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6988-K1aNb0ZgVoO2.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.0/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#qj16a&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#qj16a&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "128",
+      title: "Doraemon: Nobita's Gadget Museum",
+      poster: "https://m.media-amazon.com/images/M/MV5BNDE5ZTAzZjUtYWViMy00MDQ3LThiOTUtYjhhODAwZjI5ZWZiXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "7.9/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#a1qmr&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#a1qmr&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "129",
+      title: "Doraemon: Nobita Toofani Adventure",
+      poster: "https://m.media-amazon.com/images/M/MV5BY2UwNWMxNjctNjUyNi00ZmRjLTg3NGEtNWQzMGVkOWJmMTUzXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "7.7/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#kvfb1&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#kvfb1&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "130",
+      title: "Doraemon: Nobita Explorer Bow Bow",
+      poster: "https://m.media-amazon.com/images/M/MV5BZTU4MDkxM2EtYjE4Ny00ZDkzLWJkYzQtN2QyYzc0MmQwMjkzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Family, Comedy",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#m5g3r&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#m5g3r&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "131",
+      title: "Doraemon: Jadu Mantar Aur Janhoom",
+      poster: "https://m.media-amazon.com/images/M/MV5BNDM2ZjM4MDMtNmM4NS00MTA5LWJkZTMtMzYyOGI1Nzc1NmRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "7.7/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#ozwgr&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#ozwgr&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "132",
+      title: "Doraemon: The Movie Yea Bhi Nobita Aur Wo Bhi Nobita",
+      poster: "https://m.media-amazon.com/images/M/MV5BNGU3MTFhZDgtODc3Yy00OTA2LWI5MzYtYTlmM2JmMTJhOGRjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Comedy, Family",
+      rating: "7.8/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#h9df1&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#h9df1&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "133",
+      title: "Doraemon: Nobita and the Kingdom of Clouds",
+      poster: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2661-t74APVa55OZw.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.0/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#zoltt&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#zoltt&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "134",
+      title: "Doraemon: Nobita and Dorabian Nights",
+      poster: "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2670-Iioq4YfxHzWl.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.1/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#3ysa9&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#3ysa9&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "135",
+      title: "Doraemon: Stand By Me",
+      poster: "https://m.media-amazon.com/images/M/MV5BZDM2NmNiZWYtMGRlYy00NGM4LTliZGUtMzE1ZWZmMTllMjUwXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Family, Drama",
+      rating: "8.5/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#e6ncw&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#e6ncw&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "136",
+      title: "Doraemon: Stand By Me 2",
+      poster: "https://m.media-amazon.com/images/M/MV5BNjc2ZGZlZmMtMjZhOC00YWI0LWIxYzQtZWRmODNhZGJhYjY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Family, Drama",
+      rating: "8.2/10",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#cs3z3&dl" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#cs3z3&dl=1" }
+      ],
+      isNew: true
+    },
+    {
+      id: "137",
+      title: "Doraemon: Nobita's New Dinosaur",
+      poster: "https://m.media-amazon.com/images/M/MV5BNDM2YTY5NDYtM2U2Zi00ZGU2LWJmNzEtNzk0NGM2OGQyYjAwXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.3/10",
+      watchSources: [
+        { type: "v2", url: "https://megaplay.buzz/stream/s-2/72781/sub" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://megaplay.buzz/stream/s-2/72781/sub=1" }
+      ],
+      isNew: true
+    },
+    {
+      id: "138",
+      title: "Doraemon: Nobita's Little Star Wars 2021",
+      poster: "https://m.media-amazon.com/images/M/MV5BYTJiMDExMmEtMjliMC00ZDJhLWEyZGMtNDI2YjMzZDhkZWY0XkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg",
+      genre: "Adventure, Sci-Fi, Family",
+      rating: "9.0/10",
+      watchSources: [
+        { type: "v2", url: "https://megaplay.buzz/stream/s-2/96989/sub" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://megaplay.buzz/stream/s-2/96989/sub=1" }
+      ],
+      isNew: true
+    },
+    {
+      id: "139",
+      title: "Doraemon the Movie: Nobita and the Birth of Japan 2016",
+      poster: "https://m.media-amazon.com/images/M/MV5BMjRhYjRhYTktOGNlNS00ZmM4LWFiNmItZDZlN2QxNGU4NzBiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.7/10",
+      watchSources: [
+        { type: "v2", url: "https://megaplay.buzz/stream/s-2/58058/sub" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://megaplay.buzz/stream/s-2/58058/sub=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "140",
+      title: "Doraemon the Movie: Nobita's Earth Symphony",
+      poster: "https://m.media-amazon.com/images/M/MV5BNTc5NDZjN2ItZTgyYi00YzkyLWEyOTktOTExMTNlNmRjZjVmXkEyXkFqcGc@._V1_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.4/10",
+      watchSources: [
+        { type: "dailymotion", id: "x9d8sby" },
+        { type: "v2extra", url: "https://2anime.xyz/embed/doraemon-movie-43-nobita-no-chikyuu-symphony-episode-1" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://2anime.xyz/embed/doraemon-movie-43-nobita-no-chikyuu-symphony-episode-1=1" }
+      ],
+      isNew: true
+    },
+    {
+      id: "141",
+      title: "Doraemon: Nobita's Art World Tales",
+      poster: "https://m.media-amazon.com/images/M/MV5BMTAwMDllODMtMmIxNC00OGQ2LTg2YjgtNDRkNTRlMjc2OGM1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Adventure, Fantasy, Family",
+      rating: "8.2/10",
+      watchSources: [
+        { type: "G1", url: "https://short.icu/Uwq3DNyTe" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://short.icu/Uwq3DNyTe=1" }
+      ],
+      isNew: true
+    }
+  ],
+  shinchan: [
+    {
+      id: "21",
+      title: "Shin-chan: Action Mask vs. Leotard Devil (1993)",
+      poster: "https://m.media-amazon.com/images/M/MV5BYjU3NTkwYmQtY2VjOC00YTBhLTlhYzEtMzQ5NmZjYWIxZTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      spotlightImage: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/03/Crayon-Shin-Chan.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.4/10",
+      year: "1993",
+      duration: "93 min",
+      director: "Mitsuru Hongo",
+      description: "Shin-chan's favorite superhero Action Mask faces off against the villainous Leotard Devil in this action-packed adventure.",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#abc123&dl" },
+        { type: "dailymotion", id: "x9abc123" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#abc123&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "22",
+      title: "Shin-chan: The Hidden Treasure of the Buri Buri Kingdom (1994)",
+      poster: "https://m.media-amazon.com/images/M/MV5BYjU3NTkwYmQtY2VjOC00YTBhLTlhYzEtMzQ5NmZjYWIxZTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.1/10",
+      year: "1994",
+      duration: "95 min",
+      director: "Mitsuru Hongo",
+      description: "Shin-chan and his family embark on a treasure hunting adventure in the mysterious Buri Buri Kingdom.",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#def456&dl" },
+        { type: "dailymotion", id: "x9def456" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#def456&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "23",
+      title: "Shin-chan: Unkokusai's Ambition (1995)",
+      poster: "https://m.media-amazon.com/images/M/MV5BYjU3NTkwYmQtY2VjOC00YTBhLTlhYzEtMzQ5NmZjYWIxZTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.6/10",
+      year: "1995",
+      duration: "97 min",
+      director: "Mitsuru Hongo",
+      description: "Shin-chan faces the ambitious Unkokusai in this thrilling adventure filled with comedy and action.",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#ghi789&dl" },
+        { type: "dailymotion", id: "x9ghi789" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#ghi789&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "24",
+      title: "Shin-chan: Great Adventure In Henderland (1996)",
+      poster: "https://m.media-amazon.com/images/M/MV5BYjU3NTkwYmQtY2VjOC00YTBhLTlhYzEtMzQ5NmZjYWIxZTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.4/10",
+      year: "1996",
+      duration: "99 min",
+      director: "Mitsuru Hongo",
+      description: "Shin-chan visits the magical theme park Henderland where he encounters mysterious adventures.",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#jkl012&dl" },
+        { type: "dailymotion", id: "x9jkl012" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#jkl012&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "25",
+      title: "Shin-chan: Pursuit of the Balls of Darkness (1997)",
+      poster: "https://m.media-amazon.com/images/M/MV5BYjU3NTkwYmQtY2VjOC00YTBhLTlhYzEtMzQ5NmZjYWIxZTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.1/10",
+      year: "1997",
+      duration: "100 min",
+      director: "Keiichi Hara",
+      description: "Shin-chan must stop the evil forces pursuing the mysterious Balls of Darkness.",
+      watchSources: [
+        { type: "watch1", url: "https://zoro.rpmplay.xyz/#mno345&dl" },
+        { type: "dailymotion", id: "x9mno345" }
+      ],
+      downloadSources: [
+        { type: "Download", url: "https://zoro.rpmplay.xyz/#mno345&dl=1" }
+      ],
+      isNew: false
+    },
+    {
+      id: "26",
+      title: "Shin-chan: Dengeki! Buta no Hizume Daisakusen (1998)",
+      poster: "https://media.themoviedb.org/t/p/original/8Wd9O0IjvUPMITU9HNA7elUCYkH.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.9/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "27",
+      title: "Shin-chan: Explosion! The Hot Spring's Feel Good Final Battle (1999)",
+      poster: "https://media.themoviedb.org/t/p/original/kYDZKDB0mkAglbl2phJfLFJmKqe.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.4/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "28",
+      title: "Shin-chan: A Storm-invoking Jungle (2000)",
+      poster: "https://media.themoviedb.org/t/p/original/pbcpCQ8sHRUhNCeCnBTgdver4N6.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.7/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "29",
+      title: "Shin-chan: The Adult Empire Strikes Back (2001)",
+      poster: "https://media.themoviedb.org/t/p/original/heJkgOCx4pHqdooYA1h7B65ghvf.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.8/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "210",
+      title: "Shin-chan: A Storm-invoking Splendor! The Battle of the Warring States (2002)",
+      poster: "https://media.themoviedb.org/t/p/original/tmfQp0pG9BsdTpmFpBIuUuCxtWA.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "9.1/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "211",
+      title: "Shin-chan: The Glorious Storm-invoking Yakiniku Road (2003)",
+      poster: "https://media.themoviedb.org/t/p/original/rTi11MgpFwCEpmAS6TjaOVhLqWk.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.8/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "212",
+      title: "Shin-chan: Invoke a Storm! The Kasukabe Boys of the Evening Sun (2004)",
+      poster: "https://media.themoviedb.org/t/p/original/1o0VFMuFrcczh3vNPWOGzEPjMjK.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.9/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "213",
+      title: "Shin-chan: The Legend Called Buri Buri 3 Minutes Charge (2005)",
+      poster: "https://media.themoviedb.org/t/p/original/34FK9wKwkaIyM8CG3UCPodeBMUe.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.0/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "214",
+      title: "Shin-chan: The Legend Called Dance! Amigo! (2006)",
+      poster: "https://media.themoviedb.org/t/p/original/vjWBUrPshZiBHAEXR9mlMlVlbOZ.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.2/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "215",
+      title: "Shin-chan: Invoke a Storm! The Singing Buttocks Bomb (2007)",
+      poster: "https://media.themoviedb.org/t/p/original/uHqdEReaPvmyRWbOZ0uXsrNEiHu.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.7/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "216",
+      title: "Shin-chan: Invoke a Super Storm! The Hero of Kinpoko (2008)",
+      poster: "https://media.themoviedb.org/t/p/original/nTEE7CByX86ZALfTzKCfuJpU4kB.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.1/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "217",
+      title: "Shin-chan: Roar! Kasukabe Animal Kingdom (2009)",
+      poster: "https://media.themoviedb.org/t/p/original/w0SeTVkKOniXbCeTxE3XVQ7JtQ5.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.3/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "218",
+      title: "Shin-chan: Super-Dimension! The Storm Called My Bride (2010)",
+      poster: "https://media.themoviedb.org/t/p/original/zUoLr4wvk45t19HdrNWFGp0RtbG.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.9/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "219",
+      title: "Shin-chan: Fierceness That Invites Storm! Operation Golden Spy (2011)",
+      poster: "https://media.themoviedb.org/t/p/original/bXorDERG6ARfayQwKNCC4d37OWd.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.0/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "220",
+      title: "Shin-chan: Invoke a Storm! Me and the Space Princess (2012)",
+      poster: "https://media.themoviedb.org/t/p/original/7NGIushHHtUuOwnDMoGWRpkrOwx.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.1/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "221",
+      title: "Shin-chan: Very Tasty! B-class Gourmet Survival!! (2013)",
+      poster: "https://media.themoviedb.org/t/p/original/iPN3Vy71U0B7p1R667EdifmwW1b.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.8/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "222",
+      title: "Shin-chan: Intense Battle! Robo Dad Strikes Back (2014)",
+      poster: "https://media.themoviedb.org/t/p/original/esfaXxlsOfUwWknzvUq9n0M0fiS.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.9/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "223",
+      title: "Shin-chan: My Moving Story! Cactus Large Attack! (2015)",
+      poster: "https://media.themoviedb.org/t/p/original/rdIhlmuqFZ8gQtBbGQcCkLJ7jmB.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.0/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "224",
+      title: "Shin-chan: Fast Asleep! Dreaming World Big Assault! (2016)",
+      poster: "https://media.themoviedb.org/t/p/original/xgHTpx8dywe3QTd5iuKuB0g3SNv.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.1/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "225",
+      title: "Shin-chan: Invasion!! Alien Shiriri (2017)",
+      poster: "https://media.themoviedb.org/t/p/original/aa7X8NXBoeQfhqzJ079SN8WAJMm.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.9/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "226",
+      title: "Shin-chan: Burst Serving! Kung Fu Boys Ramen Rebellion (2018)",
+      poster: "https://media.themoviedb.org/t/p/original/xWv5pUwyf96MDImATZYx0toI7T7.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.2/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "227",
+      title: "Shin-chan: Honeymoon Hurricane The Lost Hiroshi (2019)",
+      poster: "https://media.themoviedb.org/t/p/original/lX4GqaRoOdnQB34mQjDzwnscvj6.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "7.8/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "228",
+      title: "Shin-chan: Crash! Scribble Kingdom and Almost Four Heroes (2020)",
+      poster: "https://media.themoviedb.org/t/p/original/qcaJphCRI9jOfNPWw0I1L6CY3bk.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.0/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "229",
+      title: "Shin-chan: Shrouded in Mystery! The Flowers of Tenkazu Academy (2021)",
+      poster: "https://media.themoviedb.org/t/p/original/onjXddYzreFnVHUGiAoCFNJtequ.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.1/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "230",
+      title: "Shin-chan the Movie: The Tornado Legend of Ninja Mononoke (2022)",
+      poster: "https://media.themoviedb.org/t/p/original/wyYfIWUtetlfxor8ibugKXthdKE.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.2/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "231",
+      title: "New Dimension! Shin-chan the Movie: Battle of Supernatural Powers Flying Sushi (2023)",
+      poster: "https://media.themoviedb.org/t/p/original/a56Fm2YWrlnqlC3TIgDvCJdzlKI.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.3/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    },
+    {
+      id: "232",
+      title: "Shin-chan the Movie: Our Dinosaur Diary (2024)",
+      poster: "https://media.themoviedb.org/t/p/original/n7YcOeqPOmvQ2PUatn4UqV5YStj.jpg",
+      genre: "Comedy, Adventure, Family",
+      rating: "8.4/10",
+      watchSources: [],
+      downloadSources: [],
+      isNew: false
+    }
+  ],
+  pokemon: [
+    // All Pokémon movies removed and stored in backup file
+  ]
+};
+
+export const getAllMovies = () => {
+  return [
+    ...moviesData.doraemon.filter(movie => !movie.hidden),
+    ...moviesData.shinchan.filter(movie => !movie.hidden),
+    ...moviesData.pokemon.filter(movie => !movie.hidden)
+  ];
+};
+
+export const getDoraemonMovies = () => {
+  return moviesData.doraemon;
+};
+
+export const getShinchanMovies = () => {
+  return moviesData.shinchan;
+};
